@@ -29,13 +29,7 @@ export default function Home() {
       <BlogSection />
       <Footer />
 
-      {/* Aap yahan naye sections add kar sakte hain, jo automatic scroll honge */}
-      <section className="py-20 px-6 text-white text-center">
-        <h3 className="text-2xl font-light tracking-widest uppercase">Premium Tiles</h3>
-        <p className="mt-4 text-gray-400 max-w-2xl mx-auto text-sm">
-          Crafting beauty for your spaces with international quality standards.
-        </p>
-      </section>
+     
     </main>
   );
 }
