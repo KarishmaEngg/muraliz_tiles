@@ -1,0 +1,596 @@
+gsap.registerPlugin(ScrollTrigger);
+
+// let counter = 0;
+// window.onload = function(){
+//   const loaderTimer = setInterval(function () {
+//     counter++;
+//     $(".preloader__container__percent").text(counter);
+//     if (counter == 100) {
+//       clearInterval(loaderTimer);
+//       gsap.to(".preloader", 0.7, { delay: 0.5, x: "100%", ease:"power4.inOut" });
+//     }
+//   }, 5);
+
+
+  gsap.to(".head_1", {
+    y: 0,
+    duration: 1,
+    delay: 1,
+    ease: "power3.out",
+    stagger: {
+      amount: 0.5,
+    },
+  });
+
+
+  gsap.to(".head_2", {
+    y: 0,
+    ease: "power3.out",
+  
+    duration: 1,
+    delay: 1.2,
+    stagger: {
+      amount: 0.5,
+    },
+  });
+  
+  gsap.to(".head_3", {
+    y: 0,
+    ease: "power3.out",
+  
+    duration: 1,
+    delay: 1.4,
+    stagger: {
+      amount: 0.5,
+    },
+  });
+
+  gsap.to(".head_150", {
+    y: 0,
+    ease: "power3.out",
+  
+    duration: 1,
+    delay: 1.6,
+    stagger: {
+      amount: 0.5,
+    },
+  });
+
+
+const textrev = gsap.timeline();
+
+textrev.from(".line span", 2, {
+  y: 200,
+  ease: "power4.out",
+  delay: 2,
+  // skewY: 10,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+gsap.to(".slide-shop", {
+  opacity: 1,
+  ease: "power3.out",
+
+  duration: 1,
+  delay: 2.5,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+
+
+function goToSection(i, anim) {
+  gsap.to(".panel", {
+    scrollTo: { y: i * innerHeight, autoKill: false },
+    duration: 1.4,
+    overwrite: true,
+    opacity: 1,
+  });
+}
+
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    onEnter: () => goToSection(i),
+  });
+
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "bottom bottom",
+    onEnterBack: () => goToSection(i),
+  });
+});
+
+gsap.to(".hori_scroll_one", {
+  duration: 20,
+  x: 1000,
+  // pin:true,
+  scrollTrigger: {
+    trigger: ".hori_scroll_one",
+    start: "top 100%",
+    end: "end 80%",
+    scrub: 1,
+    stagger: true,
+    pin: true,
+    pinSpacing: false,
+
+  },
+});
+
+gsap.to(".para-div-scroll", {
+  duration: 1,
+  opacity: 0,
+  delay: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".para-div-scroll",
+    start: " 50%",
+    end: " 20%",
+    scrub: 2,
+    stagger: {
+      amount: 0.5,
+    },
+
+  },
+});
+
+gsap.to(".img-1", {
+  duration: 5,
+  y: -700,
+
+  scrollTrigger: {
+    trigger: ".img-1",
+    start: " 90%",
+    end: " 20%",
+    scrub: 2,
+
+    stagger: {
+      amount: 0.5,
+    },
+  },
+});
+
+gsap.to(".img-2", {
+  duration: 5,
+  y: -500,
+  delay: 3,
+
+  scrollTrigger: {
+    trigger: ".img-2",
+    start: " 90%",
+    end: " 20%",
+    scrub: 1,
+
+    stagger: {
+      amount: 0.5,
+    },
+  },
+});
+
+gsap.to(".img-3", {
+  duration: 5,
+  y: -300,
+  delay: 1,
+
+  scrollTrigger: {
+    trigger: ".img-3",
+    start: " 90%",
+    end: " 20%",
+    scrub: 1,
+
+    stagger: {
+      amount: 0.5,
+    },
+  },
+});
+
+
+gsap.to(".head_5", {
+  y: 0,
+  duration: 1,
+  // delay: 0.5,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_5",
+    start: "top 90%",
+
+  },
+});
+
+gsap.to(".head_6", {
+  y: 0,
+  duration: 1,
+  // delay: 0.5,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_5",
+    start: "top 90%",
+    // toggleActions: "play reverse play reverse",
+  },
+});
+
+const textrev2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".head_5",
+    start: "top 90%",
+    // toggleActions: "play reverse play reverse",
+  },
+});
+
+textrev2.from(".main_pla_txt", {
+  y: 200,
+  ease: "power4.out",
+  // delay: 1,
+  duration: 1,
+
+  skewY: 10,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+gsap.to(".left_shop_konw", {
+  opacity: 1,
+  duration: .5,
+  // delay: 2,
+  ease: "power3.in",
+
+  scrollTrigger: {
+    trigger: ".head_5",
+    start: "top 90%",
+
+  },
+});
+
+gsap.to(".head_7", {
+  y: 0,
+  duration: 1,
+  // delay: 0.5,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_7",
+    start: "top 90%",
+
+  },
+});
+
+gsap.to(".head_8", {
+  y: 0,
+  duration: 1,
+  // delay: 1,
+  ease: "power3.out",
+  stagger: {
+    amount: 1,
+  },
+  scrollTrigger: {
+    trigger: ".head_7",
+    start: "top 90%",
+
+  },
+});
+
+const textrev3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".head_7",
+    start: "top 90%",
+
+  },
+});
+
+textrev3.from(".main_pla_txt2", {
+  y: 200,
+  ease: "power4.out",
+  // delay: 1.5,
+  // skewY: 10,
+  duration: 1,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+gsap.to(".left_shop_kon", {
+  opacity: 1,
+  duration: 1,
+  // delay: 2,
+  ease: "power3.in",
+
+  scrollTrigger: {
+    trigger: ".head_7",
+    start: "top 70%",
+  },
+});
+
+gsap.to(".head_9", {
+  y: 0,
+  duration: 1,
+  delay: 1,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_9",
+    start: "top 35.5%",
+  },
+});
+
+gsap.to(".head_10", {
+  y: 0,
+  duration: 1,
+  delay: 1.5,
+  ease: "power3.out",
+  stagger: {
+    amount: 1,
+  },
+  scrollTrigger: {
+    trigger: ".head_10",
+    start: "top 45%",
+
+  },
+});
+
+gsap.to(".head_11", {
+  y: 0,
+  duration: 1,
+  delay: 2,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_11",
+    start: "top 55.5%",
+
+  },
+});
+
+const textrev4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main_pla_txt3",
+    start: "top 95%",
+
+  },
+});
+
+textrev4.from(".main_pla_txt3", {
+  y: 200,
+  ease: "power4.out",
+  // delay: 0.5,
+  duration: 0.5,
+  // skewY: 10,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+const textrevmobile = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".mobile-main_pla_txt3",
+    start: "top 85%",
+  },
+});
+
+textrevmobile.from(".mobile-main_pla_txt3", {
+  y: 200,
+  ease: "power4.out",
+  // delay: 0.5,
+  duration: .3,
+  skewY: 10,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+const textrev5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main_pla_txt4",
+    start: "top 110%",
+
+
+  },
+});
+
+textrev5.from(".main_pla_txt4", {
+  y: 200,
+  ease: "power4.out",
+  duration: 1,
+
+  // delay: 0.5,
+  // skewY: 10,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+gsap.to(".head_15", {
+  y: 0,
+  duration: 0.25,
+  // delay: 0.5,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_15",
+    start: "top 90%",
+  },
+});
+
+gsap.to(".head_16", {
+  y: 0,
+  duration: 1,
+  // delay: 1,
+  ease: "power3.out",
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head_15",
+    // start: "top 85%",
+    start: "top 85%",
+  },
+});
+
+const textrev6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".head_15",
+    // start: "top 99%",
+    start: "top 85%",
+  },
+});
+
+textrev6.from(".main_pla_txt6", {
+  y: 200,
+  ease: "power4.out",
+  delay: 0.5,
+  // skewY: 10,
+  stagger: {
+    amount: 0.5,
+  },
+});
+
+gsap.to(".left_shop_konw3", {
+  // x: 0,
+  opacity: 1,
+  duration: 1,
+  delay: 1,
+  ease: "power3.in",
+
+  scrollTrigger: {
+    trigger: ".head_15",
+    // start: "top 90%",
+    start: "top 85%",
+  },
+});
+
+gsap.to(".head1in", {
+  x: -350,
+  ease: "power4.out",
+  duration: 4,
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head1in",
+    start: "top 10%",
+    end: "top",
+    scrub: 0.5,
+  },
+});
+
+gsap.to(".head2in", {
+  x: -400,
+  ease: "power4.out",
+  duration: 2,
+  stagger: {
+    amount: 0.5,
+  },
+  scrollTrigger: {
+    trigger: ".head1in",
+    start: "top 10%",
+    end: "top 0%",
+    scrub: 0.5,
+  },
+});
+
+gsap.to(".head3in", {
+  x: -500,
+  ease: "power4.out",
+  duration: 2,
+  stagger: {
+    amount: 1.5,
+  },
+  scrollTrigger: {
+    trigger: ".head1in",
+    start: "top 10%",
+    end: "top 0%",
+    scrub: 0.5,
+  },
+});
+
+gsap.to(".rotate ", {
+  duration: 1,
+  y: -450,
+  x: 100,
+  opacity: 0,
+  // scale:-.1,
+  rotation: 120,
+  scrollTrigger: {
+    trigger: ".rotate",
+    start: "top 50%",
+    end: "end 10%",
+    scrub: 1,
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+gsap.to(".hori_section", {
+  duration: 1.4,
+  y: -220,
+  // pin:true,
+  //   delay:3,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".hori_section",
+    start: "top 20%",
+    end: "end 1%",
+    scrub: {
+      amount: 1,
+    },
+    toggleActions: "play reverse play reverse",
+  },
+});
+
+gsap.utils.toArray(".gallery__img").forEach((image) => {
+  gsap.to(image, {
+    y: "-23%",
+    scrollTrigger: {
+      trigger: image,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 1,
+      endTrigger: image,
+    },
+  });
+});
+
+
+const counters = document.querySelectorAll('.counter');
+const speed = 200; // The lower the slower
+
+counters.forEach(counter => {
+	const updateCount = () => {
+		const target = +counter.getAttribute('data-target');
+		const count = +counter.innerText;
+
+		// Lower inc to slow and higher to slow
+		const inc = target / speed;
+
+		// console.log(inc);
+		// console.log(count);
+
+		// Check if target is reached
+		if (count < target) {
+			// Add inc to count and output in counter
+			counter.innerText = count + inc;
+			// Call function every ms
+			setTimeout(updateCount, 1);
+		} else {
+			counter.innerText = target;
+		}
+	};
+
+	updateCount();
+});
