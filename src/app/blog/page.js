@@ -78,7 +78,7 @@ export default function BlogPage() {
       <Navbar />
 
       {/* 🔥 HERO IMAGE */}
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
         <Image
           src="/blog-hero.jpg"
           alt="Blog Banner"

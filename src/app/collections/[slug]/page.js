@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import React from 'react';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 
-export default function KarishmaPage() {
+export default function MuralizPage() {
   const navLinks = [
     { name: 'HOME', href: '#' },
     { name: 'OUR STORY', href: '#' },
@@ -35,7 +35,7 @@ export default function KarishmaPage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://karishmatiles.com/assets/images/Our%20Products%20Banner.png" 
+            src="https://Muraliztiles.com/assets/images/Our%20Products%20Banner.png" 
             alt="Hero Interior" 
             className="w-full h-full object-cover"
           />
@@ -65,10 +65,10 @@ export default function KarishmaPage() {
             <img src="https://i.pinimg.com/1200x/bf/dd/f4/bfddf4e690dab3e72ea61a2f15222f43.jpg" alt="Interior 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div className="aspect-[4/5] overflow-hidden">
-            <img src="https://karishmatiles.com/assets/images/Our%20Collections_Inside_Explore_Images/Tiles%20n%20Slabs/Tile%20Slab%202.png" alt="Interior 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="https://Muraliztiles.com/assets/images/Our%20Collections_Inside_Explore_Images/Tiles%20n%20Slabs/Tile%20Slab%202.png" alt="Interior 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div className="aspect-[4/5] overflow-hidden">
-            <img src="https://karishmatiles.com/assets/images/Our%20Collections_Inside_Explore_Images/Tiles%20n%20Slabs/Tile%20Slab%203.png" alt="Interior 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="https://Muraliztiles.com/assets/images/Our%20Collections_Inside_Explore_Images/Tiles%20n%20Slabs/Tile%20Slab%203.png" alt="Interior 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
         </div>
       </section>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-
 // ── COLLECTIONS DATA ──────────────────────────────────────────────
 const COLLECTIONS = [
   {
@@ -20,7 +19,7 @@ const COLLECTIONS = [
     id: "handmade-tiles",
     heading: "HANDMADE TILES",
     tagline: "Traditional techniques passed down through generations.",
-    description: "Karishma's Handmade Tiles are a true testament to artistry and craftsmanship.",
+    description: "Muraliz's Handmade Tiles are a true testament to artistry and craftsmanship.",
     imageSide: "right", 
     heroSrc: "https://karishmatiles.com/assets/images/Handmade-Tiles/Handmade-Tile.jpg",
     thumbSrc: "https://i.pinimg.com/736x/fd/95/82/fd9582726d25e46b6f4667906deb500c.jpg",
@@ -72,16 +71,21 @@ export default function CollectionsPage() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap');
       `}</style>
 
-     
+      {/* ── HERO SECTION (Adjusted Size to h-[75vh]) ── */}
+      <section className="relative h-[75vh] w-full flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <img 
+          src="https://karishmatiles.com/assets/images/Our%20Products%20Banner.png"
+          alt="Our Collections Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        
+        {/* Dark Overlay for Text Clarity */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* ── HERO SECTION ── */}
-      <section className="relative h-screen min-h-[560px] flex items-center justify-center overflow-hidden bg-[#0d0d0d]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_60%,#1e1e1e_0%,#0d0d0d_55%,#080808_100%)]" />
-        <div className="absolute top-0 right-0 w-[42%] h-full bg-gradient-to-br from-white/5 to-transparent" style={{ clipPath: 'polygon(55% 0%, 100% 0%, 100% 100%, 12% 100%)' }} />
-
-        <div className="relative z-10 text-center text-white mt-20">
-          <p className="text-[9px] tracking-[0.5em] uppercase opacity-40 mb-4 font-light">Karishma Surfaces</p>
-          <h1 className="font-serif text-4xl md:text-7xl tracking-widest uppercase">Our Collections</h1>
+        <div className="relative z-20 text-center text-white mt-10 px-4">
+          <p className="text-[9px] tracking-[0.5em] uppercase opacity-80 mb-4 font-light">Muraliz Surfaces</p>
+          <h1 className="font-serif text-3xl md:text-6xl tracking-widest uppercase">Our Collections</h1>
         </div>
       </section>
 
@@ -92,8 +96,8 @@ export default function CollectionsPage() {
         ))}
       </main>
 
+      <Footer/>
     </div>
-    <Footer />
     </>
   );
 }

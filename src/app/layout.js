@@ -1,22 +1,32 @@
-// src/app/layout.js
-import "./globals.css"; // Sabse upar Tailwind ki CSS file import karein
+import { Playfair_Display, Inter } from "next/font/google";
+import "./globals.css";
+
+// 1. Headings ke liye Serif Font (Luxury & Premium Look)
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair", // Isse hum CSS mein use kar payenge
+  weight: ["400", "500", "600", "700"],
+});
+
+// 2. Body/Content ke liye Sans Font (Clean & Readable)
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600"],
+});
 
 export const metadata = {
-  title: "MURALIZ | The Magic of Surfaces",
-  description: "Experience premium tile designs and murals for your space.",
+  title: "Muraliz Tiles | Premium Luxury Surfaces",
+  description: "Exquisite tile collections for luxury spaces and premium interiors.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Google Fonts (Optional: Elegant Serif Look ke liye) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet" />
-      </head>
-      <body className="antialiased bg-black selection:bg-white/20 selection:text-white">
-        {/* 'children' wo content hai jo page.js se aayega */}
+    <html
+      lang="en"
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+    >
+      <body className={`${inter.className} min-h-full flex flex-col`}>
         {children}
       </body>
     </html>

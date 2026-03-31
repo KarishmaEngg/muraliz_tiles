@@ -27,7 +27,7 @@ const AboutSection = () => {
 
           <div className="space-y-6 text-gray-600 font-light leading-relaxed text-sm md:text-base text-justify">
             <p>
-              Welcome to Karishma Tiles & Stones, your one-stop destination for premium quality 
+              Welcome to Muraliz Tiles & Stones, your one-stop destination for premium quality 
               surfaces that can bring your vision to life. Embrace a seamless journey towards 
               transforming your home or crafting a fresh environment as our extensive range 
               of tiles and stones becomes your canvas, enabling you to curate the ideal 

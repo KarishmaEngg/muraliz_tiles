@@ -1,135 +1,101 @@
 "use client";
-import React from 'react';
-import Link from 'next/link';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import React from "react";
+import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#E5E7EB] pt-20 pb-10 border-t border-gray-100">
-      <div className="max-w-[1300px] mx-auto px-6">
-        <div className="flex flex-wrap -mx-4">
-          
-          {/* Column 1: Brand */}
-          <div className="w-full lg:w-4/12 px-4 mb-12 lg:mb-0">
-            <h2 className="text-[20px] font-bold tracking-[0.25em] text-[#1a1a1a] mb-8 uppercase">
+    <footer className="bg-black text-white pt-16 pb-8 font-sans">
+      <div className="max-w-[1200px] mx-auto px-6">
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          {/* BRAND */}
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 text-white">
               MURALIZ
             </h2>
-            <p className="text-[14px] text-[#777] leading-[1.8] font-light max-w-[320px]">
-              With over 3 decades of excellence, we specialize in providing premium stone and tile surfaces that redefine luxury and durability for modern spaces.
+
+            <p className="text-sm text-white/80 leading-relaxed mb-6">
+              Download our premium collection app and explore luxury tiles & stones.
             </p>
+
+         
+
+           
           </div>
 
-          {/* Column 2: Navigation */}
-          <div className="w-full sm:w-1/2 lg:w-2/12 px-4 mb-12 lg:mb-0">
-            <h3 className="text-[12px] font-bold tracking-[0.2em] text-[#1a1a1a] mb-8 uppercase">
-              Navigation
-            </h3>
-            <ul className="space-y-4">
-
-              <li>
-                <Link href="/" className="footer-link">Home</Link>
-              </li>
-
-              <li>
-                <Link href="/Our_Story" className="footer-link">Our Story</Link>
-              </li>
-
-              <li>
-                <Link href="/collections" className="footer-link">Products</Link>
-              </li>
-
+          {/* LINKS */}
+          <div>
+            <h3 className="text-sm font-semibold mb-4 text-white">About</h3>
+            <ul className="space-y-2 text-sm text-white/80">
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/Our_Story">Our Story</Link></li>
+              <li><Link href="/collections">Collections</Link></li>
               
-
-              <li>
-                <Link href="/blog" className="footer-link">Blog</Link>
-              </li>
-
-              <li>
-                <Link href="/contact" className="footer-link">Contact</Link>
-              </li>
-
-              <li>
-                <Link href="/clientele" className="footer-link">Clientle</Link>
-              </li>
-
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
-          <div className="w-full sm:w-1/2 lg:w-6/12 px-4">
-            <h3 className="text-[12px] font-bold tracking-[0.2em] text-[#1a1a1a] mb-8 uppercase">
-              Get In Touch
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              
-              {/* Address */}
-              <div className="flex gap-4">
-                <MapPin size={18} className="text-[#999] shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-[11px] font-bold tracking-wider text-[#333] uppercase mb-2">
-                    Office
-                  </h4>
-                  <p className="text-[13px] text-[#777] leading-relaxed font-light">
-                    Industrial Area,<br />
-                    Moradabad, Uttar Pradesh - 244001
-                  </p>
-                </div>
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-6">
-
-                <div className="flex gap-4 items-center">
-                  <Phone size={16} className="text-[#999]" />
-                  <a href="tel:+919876543210" className="text-[13px] text-[#777] font-light hover:text-black">
-                    +91 98765 43210
-                  </a>
-                </div>
-
-                <div className="flex gap-4 items-center">
-                  <Mail size={16} className="text-[#999]" />
-                  <a href="mailto:info@muraliztiles.com" className="text-[13px] text-[#777] font-light hover:text-black">
-                    info@muraliztiles.com
-                  </a>
-                </div>
-
-              </div>
-
-            </div>
+          {/* HELP */}
+          <div>
+            <h3 className="text-sm font-semibold mb-4 text-white">Support</h3>
+            <ul className="space-y-2 text-sm text-white/80">
+              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/projects">Projects</Link></li>
+            
+            </ul>
           </div>
+
+         {/* SUBSCRIBE */}
+<div>
+  <h3 className="text-lg font-semibold mb-4 text-white">
+    Subscribe for updates
+  </h3>
+
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+      window.open(
+        "https://your-link-here.com/19ac13d2-4a13-4011-84d9-0c7fa50d76db",
+        "_blank"
+      );
+    }}
+  >
+    <input
+      type="email"
+      placeholder="Enter Your Email"
+      required
+      className="w-full px-4 py-3 rounded bg-white text-black text-sm outline-none mb-3"
+    />
+
+    <button
+      type="submit"
+      className="w-full bg-white text-[#1F8A83] py-3 rounded font-semibold hover:bg-gray-100 transition"
+    >
+      Subscribe
+    </button>
+  </form>
+
+  <p className="text-xs text-white/70 mt-3">
+    By subscribing you agree to our policy.
+  </p>
+</div>
 
         </div>
 
-        {/* Bottom */}
-        <div className="mt-20 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* BOTTOM */}
+        <div className="mt-10 pt-5 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-3">
 
-          <p className="text-[10px] text-[#bbb] tracking-[0.2em] uppercase font-light">
-            © 2026 MURALIZ TILES & STONES. ALL RIGHTS RESERVED.
+          <p className="text-xs text-white/70">
+            © 2026 MURALIZ. All Rights Reserved.
           </p>
 
-          <div className="flex gap-6 text-[10px] text-[#bbb]">
-            <Link href="/privacy-policy" className="hover:text-black">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-black">Terms</Link>
-          </div>
 
         </div>
+
       </div>
-
-      {/* ✅ COMMON STYLE */}
-      <style jsx>{`
-        .footer-link {
-          font-size: 13px;
-          color: #777;
-          font-weight: 300;
-          transition: all 0.3s;
-        }
-        .footer-link:hover {
-          color: black;
-          padding-left: 8px;
-        }
-      `}</style>
-
     </footer>
   );
 };

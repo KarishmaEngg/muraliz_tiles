@@ -36,3 +36,18 @@ body {
   -ms-overflow-style: none;  /* IE & Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+@layer base {
+  /* Saari Headings ke liye (H1 se H6) */
+  h1{
+    @apply font-serif tracking-[0.3em] uppercase text-white;
+  }
+   h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-[0.2em] uppercase text-gray-800;
+  }
+
+  /* Saare Content/Paragraphs ke liye */
+  p {
+    @apply font-sans text-gray-500 leading-relaxed tracking-wide;
+  }
+}

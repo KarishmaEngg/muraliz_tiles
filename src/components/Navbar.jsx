@@ -1,4 +1,4 @@
-"use client"; // Client-side interactivity ke liye zaruri hai
+"use client";
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -12,60 +12,77 @@ const Navbar = () => {
     { name: 'Our Projects', href: '/projects' },
     { name: 'Blogs', href: '/blog' },
     { name: 'Contact Us', href: '/contact' },
-    { name: 'Clientele' ,href: '/clientele'}
+    { name: 'Clientele', href: '/clientele' }
   ];
 
   return (
     <>
-      <nav className="relative z-30 flex items-center justify-between w-full px-6 py-6 md:px-12 text-white bg-gradient-to-b from-black/70 to-transparent">
-        <h1 className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase">
-          MURALIZ
-        </h1>
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b border-white/10">
+        <div className="flex items-center justify-between px-6 md:px-16 py-3">
 
-        {/* Desktop Menu (90% width container style) */}
-        <ul className="hidden md:flex gap-8 text-[11px] uppercase tracking-widest">
-          {menuItems.map((item) => (
-            <li key={item.name} className="hover:text-gray-400 transition">
-              <Link href={item.href}>{item.name}</Link>
-            </li>
-          ))}
-        </ul>
+          {/* LOGO */}
+          <h1 className="text-lg md:text-xl font-medium tracking-[0.35em] uppercase text-white">
+            MURALIZ
+          </h1>
 
-        {/* Mobile Hamburger Button */}
-        <button 
-          onClick={() => setIsOpen(true)}
-          className="md:hidden text-2xl focus:outline-none"
-        >
-          ☰
-        </button>
-      </nav>
-
-      {/* Mobile Slide-over Sidebar */}
-      <div className={`fixed inset-0 z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        {/* Overlay background */}
-        <div className="absolute inset-0 bg-black/40" onClick={() => setIsOpen(false)} />
-        
-        {/* Sidebar Content */}
-        <div className="absolute right-0 top-0 h-full w-[80%] bg-[#4a4a4a] text-white p-10 flex flex-col shadow-2xl">
-          <button 
-            onClick={() => setIsOpen(false)}
-            className="text-3xl self-start mb-12 hover:rotate-90 transition-transform"
-          >
-            ✕
-          </button>
-
-          <ul className="flex flex-col gap-6 text-xl font-light tracking-wide">
+          {/* DESKTOP MENU */}
+          <ul className="hidden md:flex gap-6 text-[10px] uppercase tracking-[0.2em]">
             {menuItems.map((item) => (
-              <li key={item.name} onClick={() => setIsOpen(false)}>
-                <Link href={item.href} className="hover:text-gray-300">{item.name}</Link>
+              <li key={item.name} className="relative group">
+                <Link href={item.href} className="text-white/90 group-hover:text-white transition">
+                  {item.name}
+                </Link>
+
+                {/* underline */}
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
           </ul>
 
-          {/* Bottom Email in Sidebar */}
-          <div className="mt-auto pt-10 border-t border-white/10">
-            <p className="text-sm opacity-50 tracking-wider">hello@muraliztile.in</p>
-          </div>
+          {/* MOBILE BUTTON */}
+          <button 
+            onClick={() => setIsOpen(true)}
+            className="md:hidden text-xl text-white"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+
+      {/* MOBILE SIDEBAR */}
+      <div className={`fixed inset-0 z-50 transition-all duration-300 ${isOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}>
+
+        {/* Overlay */}
+        <div 
+          className="absolute inset-0 bg-black/60"
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Sidebar */}
+        <div className={`absolute right-0 top-0 h-full w-[70%] bg-black text-white p-8 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+
+          {/* Close */}
+          <button 
+            onClick={() => setIsOpen(false)}
+            className="text-2xl mb-8 hover:rotate-90 transition"
+          >
+            ✕
+          </button>
+
+          {/* Menu */}
+          <ul className="flex flex-col gap-6 text-lg tracking-wide">
+            {menuItems.map((item) => (
+              <li key={item.name} onClick={() => setIsOpen(false)} className="border-b border-white/10 pb-2">
+                <Link href={item.href} className="hover:text-gray-400 transition">
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Footer */}
+          
         </div>
       </div>
     </>

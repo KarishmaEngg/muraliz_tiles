@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 
-export default function KarishmaPage() {
+export default function MuralizPage() {
   return (
     <div className="min-h-screen bg-white text-[#333] font-serif selection:bg-[#C1B087] selection:text-white">
       <Navbar />
@@ -13,18 +13,16 @@ export default function KarishmaPage() {
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
           src="/hero-tiles.png"
-          alt="Karishma Specialization"
+          alt="Muraliz Specialization"
           fill
           className="object-cover"
           priority
         />
         <div className="relative z-20 text-center text-white px-4">
           <h1 className="text-3xl md:text-5xl tracking-[0.3em] font-light leading-relaxed uppercase">
-            Specialization <br />
-            in Tiles, Stones <br />
-            Marbles & Inlays
+           Our Story
           </h1>
-          <p className="mt-6 text-sm tracking-[0.4em] opacity-90 uppercase font-sans">Since 1987</p>
+          <p className="mt-6 text-sm tracking-[0.4em] opacity-90 uppercase font-sans">Specialization in Tiles,Stones,Marbles & Inlays</p>
         </div>
       </section>
 
@@ -38,8 +36,8 @@ export default function KarishmaPage() {
         </div>
         <h2 className="text-3xl tracking-[0.2em] uppercase mb-10">Our Journey</h2>
         <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-sm md:text-base font-sans">
-          Karishma is a renowned family-owned business since three decades that has established itself as a leader in the tiles industry...
-          The name "Karishma" embodies delicacy and distinctiveness, symbolizing the creation of magical surfaces.
+          Muraliz is a renowned family-owned business since three decades that has established itself as a leader in the tiles industry...
+          The name "Muraliz" embodies delicacy and distinctiveness, symbolizing the creation of magical surfaces.
         </p>
 
         {/* Timeline Component */}
