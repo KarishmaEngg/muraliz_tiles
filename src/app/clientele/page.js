@@ -5,35 +5,39 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-// Data preserved exactly as provided
+// ✅ Updated Data (Matching Clientele Section)
 const clientLists = {
-  celebrities: [
-    "DEEPIKA PADUKONE", "ALLU ARJUN", "BRAHMANANDAM", "RAVI TEJA", 
-    "NITHIN REDDY", "GOPICHAND", "KUSHBOO SUNDAR", "CHARMME KAUR", 
-    "GANESH KISHAN", "RAHUL DRAVID", "PULLELA GOPICHAND", "GURUKIRAN"
+  temple: [
+    "Peaceful and spiritual temple layouts",
+    "Marble & stone craftsmanship",
+    "Traditional and modern temple concepts",
+    "Custom pooja unit designs"
   ],
-  hospitality: [
-    "HILTON CONRAD (Bengaluru)", "SHERATON WHITEFIELD (Bengaluru)", 
-    "COURTYARD MARRIOTT (Bengaluru)", "MARRIOTT WHITEFIELD (Bengaluru)", 
-    "HILTON GOLFLINKS (Bengaluru)"
+  kitchen: [
+    "Modular kitchen layouts",
+    "Space optimization solutions",
+    "Premium finishes & materials",
+    "Smart storage designs"
   ],
-  residences: [
-    "CM's camp office, (Vijaywada)", "ETELA RAJENDER (FM-Hyderabad)", 
-    "MICROLABS", "KARACHI BAKERY", "RS BROTHERS", "PRAKASH SHETTY (Gold Finch)", 
-    "SHIV KUMAR UDASI (MP)", "KARBONN MOBILES"
+  elevation: [
+    "Modern elevation concepts",
+    "Exterior facade styling",
+    "Luxury front design",
+    "Creative architectural detailing"
   ],
-  projects: [
-    "AMAZON (Bengaluru, Hyderabad, Chennai)", "ANZ OFFICE (Bengaluru)", 
-    "APARNA SERENE (Hyderabad)", "DELL (Bengaluru)", "EXXON MOBILE (Bengaluru)", 
-    "FACEBOOK (Bengaluru)", "GOOGLE (Hyderabad)", "GOKULDAS LIFESTYLE (Bengaluru)", 
-    "HILTON GOLF LINKS (Bengaluru)", "MICROSOFT (Bengaluru)", "UBER (Bengaluru)"
+  walls: [
+    "Designer wall panels",
+    "Textured wall finishes",
+    "3D wall concepts",
+    "Premium decorative walls"
   ]
 };
 
+// SAME COMPONENT (No change)
 const ClienteleSection = ({ title, list, image, isReverse, id }) => (
   <section id={id} className={`flex flex-col ${isReverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-0 items-center mb-24 relative px-4`}>
     
-    {/* Image Container */}
+    {/* Image */}
     <div className="w-full md:w-7/12 relative h-[500px] md:h-[600px] overflow-hidden group shadow-xl">
       <Image 
         src={image} 
@@ -44,7 +48,7 @@ const ClienteleSection = ({ title, list, image, isReverse, id }) => (
       <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
     </div>
 
-    {/* Floating Content Box */}
+    {/* Content */}
     <motion.div 
       initial={{ x: isReverse ? -50 : 50, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
@@ -53,7 +57,10 @@ const ClienteleSection = ({ title, list, image, isReverse, id }) => (
       className={`w-full md:w-5/12 z-20 -mt-20 md:mt-0 ${isReverse ? 'md:-mr-24' : 'md:-ml-24'}`}
     >
       <div className="bg-white p-8 md:p-12 border border-[#b89b5e] shadow-2xl relative">
-        <h2 className="text-[#b89b5e] text-4xl font-serif mb-6 tracking-tight">{title}</h2>
+        <h2 className="text-[#b89b5e] text-4xl font-serif mb-6 tracking-tight">
+          {title}
+        </h2>
+
         <ul className="grid grid-cols-1 gap-3">
           {list.map((name, index) => (
             <li key={index} className="flex items-start gap-3 text-gray-700 font-medium text-[10px] md:text-[12px] tracking-[0.1em] leading-relaxed uppercase">
@@ -71,16 +78,15 @@ const ClientelePage = () => {
   return (
     <>
       <main className="bg-white min-h-screen">
-        {/* 1. NAVBAR SECTION (Consistent across all pages) */}
-        <div className="w-full bg-white">
-          <Navbar />
-        </div>
 
-        {/* 2. HERO SECTION (Replacing the old grey header bar) */}
+        {/* NAVBAR */}
+        <Navbar />
+
+        {/* HERO */}
         <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
           <Image
-            src="/client_banner.jpg" // Change this to your desired hero image path
-            alt="Muraliz Clientele"
+            src="/client_banner.jpg"
+            alt="Clientele"
             fill
             className="object-cover brightness-75"
             priority
@@ -96,41 +102,44 @@ const ClientelePage = () => {
           </div>
         </div>
 
-        {/* 3. CLIENT LIST SECTIONS */}
+        {/* SECTIONS */}
         <div className="max-w-7xl mx-auto py-24 overflow-visible">
-          <ClienteleSection 
-            id="celebrities"
-            title="Celebrities" 
-            list={clientLists.celebrities} 
-            image="/c1.jpg" 
-            isReverse={false}
-          />
 
           <ClienteleSection 
-            id="hospitality"
-            title="Hospitality" 
-            list={clientLists.hospitality} 
-            image="/c2.jpg" 
+            id="temple"
+            title="Temple Design" 
+            list={clientLists.temple} 
+            image="/pooja-room.jpg" 
             isReverse={true} 
           />
 
           <ClienteleSection 
-            id="residences"
-            title="Residences" 
-            list={clientLists.residences} 
-            image="/c3.jpg" 
+            id="kitchen"
+            title="Modular Kitchen" 
+            list={clientLists.kitchen} 
+            image="/kitchen.jpg" 
             isReverse={false}
           />
 
           <ClienteleSection 
-            id="projects"
-            title="Projects" 
-            list={clientLists.projects} 
-            image="/c4.jpg" 
+            id="elevation"
+            title="Elevation Design" 
+            list={clientLists.elevation} 
+            image="/elevation.jpg" 
             isReverse={true}
           />
+
+          <ClienteleSection 
+            id="walls"
+            title="Designer Walls" 
+            list={clientLists.walls} 
+            image="/designer-wall.jpg" 
+            isReverse={false}
+          />
+
         </div>
       </main>
+
       <Footer />
     </>
   );

@@ -54,15 +54,7 @@ const Footer = () => {
     Subscribe for updates
   </h3>
 
-  <form
-    onSubmit={(e) => {
-      e.preventDefault();
-      window.open(
-        "https://your-link-here.com/19ac13d2-4a13-4011-84d9-0c7fa50d76db",
-        "_blank"
-      );
-    }}
-  >
+  
     <input
       type="email"
       placeholder="Enter Your Email"
@@ -76,7 +68,7 @@ const Footer = () => {
     >
       Subscribe
     </button>
-  </form>
+  
 
   <p className="text-xs text-white/70 mt-3">
     By subscribing you agree to our policy.
