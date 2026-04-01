@@ -13,38 +13,38 @@ export default function ClienteleSection() {
       title: "Designer Wall",
       text: "We create statement designer walls that elevate interiors with artistic textures, premium finishes, and modern aesthetics.",
       img: "/designer-wall.jpg",
-      link: "",
+      link: "/clientele",
     },
     {
       title: "Pooja Room",
       text: "Our pooja room designs bring peace and positivity with elegant tiles, creating a divine and calming environment.",
       img: "/pooja-room.jpg",
-      link: "",
+      link: "/clientele",
     },
     {
       title: "Bed Back",
       text: "Transform your bedroom with luxurious bed back tile designs that add depth and elegance.",
       img: "/bed-back.jpg",
-      link: "",
+      link: "/clientele",
     },
     {
       title: "Garden",
       text: "Our garden tile solutions enhance outdoor spaces with durable, weather-resistant, and stylish designs.",
       img: "/garden.jpg",
-      link: "",
+      link: "/clientele",
     },
-   {
-  title: "Metal Art",
-  text: "Our metal art tile designs bring a bold and contemporary touch to interiors, combining artistic patterns with metallic finishes that create a luxurious and eye-catching statement in any space.",
-  img: "/metal-art.jpg",
-  link: ""
-},
-{
-  title: "Luxurious Bathroom",
-  text: "Transform your bathroom into a spa-like retreat with our luxurious tile designs, featuring elegant textures, water-resistant surfaces, and premium finishes that offer both style and durability.",
-  img: "/bathroom-1.jpg",
-  link: ""
-}
+    {
+      title: "Metal Art",
+      text: "Our metal art tile designs bring a bold and contemporary touch to interiors, combining artistic patterns with metallic finishes that create a luxurious and eye-catching statement.",
+      img: "/metal-art.jpg",
+      link: "/clientele",
+    },
+    {
+      title: "Luxurious Bathroom",
+      text: "Transform your bathroom into a spa-like retreat with our luxurious tile designs, featuring elegant textures and premium finishes.",
+      img: "/bathroom-1.jpg",
+      link: "/clientele",
+    },
   ];
 
   return (
@@ -67,20 +67,20 @@ export default function ClienteleSection() {
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3500 }}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
           loop={true}
         >
           {data.map((item, i) => (
             <SwiperSlide key={i}>
               <div className="grid grid-cols-1 md:grid-cols-2 bg-white rounded-2xl overflow-hidden shadow-lg">
 
-                {/* LEFT IMAGE (Clickable) */}
-                <Link href={item.link} target="_blank" className="relative w-full h-[250px] md:h-[400px]">
+                {/* LEFT IMAGE */}
+                <Link href={item.link} className="relative w-full h-[250px] md:h-[400px]">
                   <Image
                     src={item.img}
                     alt={item.title}
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition duration-500"
                   />
                 </Link>
 
@@ -101,14 +101,14 @@ export default function ClienteleSection() {
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-600  leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {item.text}
                     </p>
                   </div>
 
                   {/* CTA */}
                   <div className="mt-8 border-t pt-4">
-                    <Link href={item.link} target="_blank">
+                    <Link href={item.link}>
                       <span className="text-pink-500 text-sm font-semibold cursor-pointer border-b border-pink-500 hover:opacity-80">
                         Explore More →
                       </span>
