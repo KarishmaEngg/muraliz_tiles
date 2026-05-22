@@ -23,7 +23,7 @@ const Navbar = () => {
 
           {/* LOGO */}
           <h1 className="text-lg md:text-xl font-medium tracking-[0.35em] uppercase text-white">
-            MURALIZ
+            TileVista
           </h1>
 
           {/* DESKTOP MENU */}

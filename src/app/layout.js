@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Muraliz Tiles | Premium Luxury Surfaces",
+  title: "TileVista Tiles | Premium Luxury Surfaces",
   description: "Exquisite tile collections for luxury spaces and premium interiors.",
 };
 

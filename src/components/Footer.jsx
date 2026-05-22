@@ -14,7 +14,7 @@ const Footer = () => {
           {/* BRAND */}
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-white">
-              MURALIZ
+              TileVista
             </h2>
 
             <p className="text-sm text-white/80 leading-relaxed mb-6">
@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="mt-10 pt-5 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-3">
 
           <p className="text-xs text-white/70">
-            © 2026 MURALIZ. All Rights Reserved.
+            © 2026 TileVista. All Rights Reserved.
           </p>
 
 
