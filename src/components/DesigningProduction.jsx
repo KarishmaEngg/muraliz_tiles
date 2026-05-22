@@ -7,12 +7,12 @@ const DesigningProduction = () => {
     {
       icon: "/i1.png",
       title: "INDUSTRY EXPERIENCE",
-      text: "With 3 decades of expertise and knowledge in the industry, TileVista can offer high-quality and durable products, along with exceptional customer service. This can help customers feel confident in their purchase and trust in the company's ability to provide top-notch products and services."
+      text: "With 3 decades of expertise and knowledge in the industry, Muraliz can offer high-quality and durable products, along with exceptional customer service. This can help customers feel confident in their purchase and trust in the company's ability to provide top-notch products and services."
     },
     {
       icon: "/i2.jpg",
       title: "IN HOUSE PRODUCTION",
-      text: "At TileVista, we take pride in our state-of-the-art facility and team of skilled artisans who precisely craft exceptional stone and tile surfaces from concept to completion. By controlling every step of the process, we ensure uncompromising quality, precision, and beauty in every piece, setting the standard for excellence in the industry."
+      text: "At Muraliz, we take pride in our state-of-the-art facility and team of skilled artisans who precisely craft exceptional stone and tile surfaces from concept to completion. By controlling every step of the process, we ensure uncompromising quality, precision, and beauty in every piece, setting the standard for excellence in the industry."
     },
     {
       icon: "/i3.png",
@@ -33,7 +33,7 @@ const DesigningProduction = () => {
         {/* Exact Heading from Image */}
         <div className="w-full text-center mb-12 md:mb-16">
           <h2 className="text-[22px] md:text-[28px] font-light tracking-[0.2em] text-[#5c677d] uppercase leading-tight">
-            TileVista TAKES PRIDE IN ITS DESIGNING <br className="hidden md:block" /> AND PRODUCTION CAPABILITIES
+            Muraliz TAKES PRIDE IN ITS DESIGNING <br className="hidden md:block" /> AND PRODUCTION CAPABILITIES
           </h2>
         </div>
 
@@ -44,7 +44,7 @@ const DesigningProduction = () => {
             <div className="relative h-full min-h-[400px] md:min-h-[500px]">
               <Image
                 src="/USPs-banner.jpeg"
-                alt="TileVista Designing"
+                alt="Muraliz Designing"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 33vw"

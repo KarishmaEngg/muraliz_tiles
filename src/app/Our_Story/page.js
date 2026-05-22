@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 
-export default function TileVistaPage() {
+export default function MuralizPage() {
   return (
     <div className="min-h-screen bg-white text-[#333] font-serif selection:bg-[#C1B087] selection:text-white">
       <Navbar />
@@ -13,7 +13,7 @@ export default function TileVistaPage() {
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
           src="/hero-tiles.png"
-          alt="TileVista Specialization"
+          alt="Muraliz Specialization"
           fill
           className="object-cover"
           priority
@@ -36,8 +36,8 @@ export default function TileVistaPage() {
         </div>
         <h2 className="text-3xl tracking-[0.2em] uppercase mb-10">Our Journey</h2>
         <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-sm md:text-base font-sans">
-          TileVista is a renowned family-owned business since three decades that has established itself as a leader in the tiles industry...
-          The name "TileVista" embodies delicacy and distinctiveness, symbolizing the creation of magical surfaces.
+          Muraliz is a renowned family-owned business since three decades that has established itself as a leader in the tiles industry...
+          The name "Muraliz" embodies delicacy and distinctiveness, symbolizing the creation of magical surfaces.
         </p>
 
         {/* Timeline Component */}

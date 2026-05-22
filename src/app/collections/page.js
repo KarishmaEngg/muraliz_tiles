@@ -19,7 +19,7 @@ const COLLECTIONS = [
     id: "handmade-tiles",
     heading: "HANDMADE TILES",
     tagline: "Traditional techniques passed down through generations.",
-    description: "TileVista's Handmade Tiles are a true testament to artistry and craftsmanship.",
+    description: "Muraliz's Handmade Tiles are a true testament to artistry and craftsmanship.",
     imageSide: "right", 
     heroSrc: "https://karishmatiles.com/assets/images/Handmade-Tiles/Handmade-Tile.jpg",
     thumbSrc: "https://i.pinimg.com/736x/fd/95/82/fd9582726d25e46b6f4667906deb500c.jpg",
@@ -84,7 +84,7 @@ export default function CollectionsPage() {
         <div className="absolute inset-0 bg-black/40 z-10" />
 
         <div className="relative z-20 text-center text-white mt-10 px-4">
-          <p className="text-[9px] tracking-[0.5em] uppercase opacity-80 mb-4 font-light">TileVista Surfaces</p>
+          <p className="text-[9px] tracking-[0.5em] uppercase opacity-80 mb-4 font-light">Muraliz Surfaces</p>
           <h1 className="font-serif text-3xl md:text-6xl tracking-widest uppercase">Our Collections</h1>
         </div>
       </section>
